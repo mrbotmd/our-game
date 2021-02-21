@@ -1,476 +1,634 @@
-export const packOne = {
-  id: 1,
-  name: "packOne",
-  description: "game pack one",
-  author: "lolkek",
-  round: 3,
-  content: [
+import { v4 as uuidv4 } from "uuid";
+export const packet = {
+  rounds: [
     {
-      name: "Round One",
-      round: 1,
-      final: false,
-      theme: [
+      number: 1,
+      id: uuidv4(),
+      themes: [
         {
           name: "Корабли",
+          id: uuidv4(),
           questions: [
             {
+              id: uuidv4(),
               price: 200,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "kek",
             },
             {
+              id: uuidv4(),
               price: 200,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "kek",
             },
             {
+              id: uuidv4(),
               price: 200,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "kek",
             },
             {
+              id: uuidv4(),
               price: 200,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "kek",
             },
             {
+              id: uuidv4(),
               price: 200,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "kek",
             },
           ],
         },
         {
           name: "Караваны",
+          id: uuidv4(),
           questions: [
             {
+              id: uuidv4(),
               price: 200,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "kek",
             },
             {
+              id: uuidv4(),
               price: 200,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "kek",
             },
             {
+              id: uuidv4(),
               price: 200,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "kek",
             },
             {
+              id: uuidv4(),
               price: 200,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "kek",
             },
             {
+              id: uuidv4(),
               price: 200,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "kek",
             },
           ],
         },
         {
           name: "Самолеты",
+          id: uuidv4(),
           questions: [
             {
+              id: uuidv4(),
               price: 200,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "kek",
             },
             {
+              id: uuidv4(),
               price: 200,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "kek",
             },
             {
+              id: uuidv4(),
               price: 200,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "kek",
             },
             {
+              id: uuidv4(),
               price: 200,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "kek",
             },
             {
+              id: uuidv4(),
               price: 200,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "kek",
             },
           ],
         },
         {
           name: "Автомобили",
+          id: uuidv4(),
           questions: [
             {
+              id: uuidv4(),
               price: 200,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "kek",
             },
             {
+              id: uuidv4(),
               price: 200,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "kek",
             },
             {
+              id: uuidv4(),
               price: 200,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "kek",
             },
             {
+              id: uuidv4(),
               price: 200,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "kek",
             },
             {
+              id: uuidv4(),
               price: 200,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "kek",
             },
           ],
         },
         {
           name: "Мотоциклы",
+          id: uuidv4(),
           questions: [
             {
+              id: uuidv4(),
               price: 200,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "kek",
             },
             {
+              id: uuidv4(),
               price: 200,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "kek",
             },
             {
+              id: uuidv4(),
               price: 200,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "kek",
             },
             {
+              id: uuidv4(),
               price: 200,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "kek",
             },
             {
+              id: uuidv4(),
               price: 200,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "kek",
             },
           ],
         },
       ],
     },
     {
-      name: "Round Two",
-      round: 2,
-      final: false,
+      number: 2,
+      id: uuidv4(),
       theme: [
         {
           name: "Облака",
+          id: uuidv4(),
           questions: [
             {
+              id: uuidv4(),
               price: 600,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lol",
             },
             {
+              id: uuidv4(),
               price: 600,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lol",
             },
             {
+              id: uuidv4(),
               price: 600,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lol",
             },
             {
+              id: uuidv4(),
               price: 600,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lol",
             },
             {
+              id: uuidv4(),
               price: 600,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lol",
             },
           ],
         },
         {
           name: "Небо",
+          id: uuidv4(),
           questions: [
             {
+              id: uuidv4(),
               price: 600,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lol",
             },
             {
+              id: uuidv4(),
               price: 600,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lol",
             },
             {
+              id: uuidv4(),
               price: 600,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lol",
             },
             {
+              id: uuidv4(),
               price: 600,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lol",
             },
             {
+              id: uuidv4(),
               price: 600,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lol",
             },
           ],
         },
         {
           name: "Ремиксы",
+          id: uuidv4(),
           questions: [
             {
+              id: uuidv4(),
               price: 600,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lol",
             },
             {
+              id: uuidv4(),
               price: 600,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lol",
             },
             {
+              id: uuidv4(),
               price: 600,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lol",
             },
             {
+              id: uuidv4(),
               price: 600,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lol",
             },
             {
+              id: uuidv4(),
               price: 600,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lol",
             },
           ],
         },
         {
           name: "Песни",
+          id: uuidv4(),
           questions: [
             {
+              id: uuidv4(),
               price: 600,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lol",
             },
             {
+              id: uuidv4(),
               price: 600,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lol",
             },
             {
+              id: uuidv4(),
               price: 600,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lol",
             },
             {
+              id: uuidv4(),
               price: 600,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lol",
             },
             {
+              id: uuidv4(),
               price: 600,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lol",
             },
           ],
         },
         {
           name: "Исполнители",
+          id: uuidv4(),
           questions: [
             {
+              id: uuidv4(),
               price: 600,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lol",
             },
             {
+              id: uuidv4(),
               price: 600,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lol",
             },
             {
+              id: uuidv4(),
               price: 600,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lol",
             },
             {
+              id: uuidv4(),
               price: 600,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lol",
             },
             {
+              id: uuidv4(),
               price: 600,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lol",
             },
           ],
         },
       ],
     },
     {
-      name: "Round Three",
-      round: 3,
-      final: true,
+      number: 3,
+      id: uuidv4(),
       theme: [
         {
           name: "Металургия",
+          id: uuidv4(),
           questions: [
             {
+              id: uuidv4(),
               price: 800,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lolkek",
             },
             {
+              id: uuidv4(),
               price: 800,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lolkek",
             },
             {
+              id: uuidv4(),
               price: 800,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lolkek",
             },
             {
+              id: uuidv4(),
               price: 800,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lolkek",
             },
             {
+              id: uuidv4(),
               price: 800,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lolkek",
             },
           ],
         },
         {
           name: "Платины",
+          id: uuidv4(),
           questions: [
             {
+              id: uuidv4(),
               price: 800,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lolkek",
             },
             {
+              id: uuidv4(),
               price: 800,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lolkek",
             },
             {
+              id: uuidv4(),
               price: 800,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lolkek",
             },
             {
+              id: uuidv4(),
               price: 800,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lolkek",
             },
             {
+              id: uuidv4(),
               price: 800,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lolkek",
             },
           ],
         },
         {
           name: "Легкая атлетика",
+          id: uuidv4(),
           questions: [
             {
+              id: uuidv4(),
               price: 800,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lolkek",
             },
             {
+              id: uuidv4(),
               price: 800,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lolkek",
             },
             {
+              id: uuidv4(),
               price: 800,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lolkek",
             },
             {
+              id: uuidv4(),
               price: 800,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lolkek",
             },
             {
+              id: uuidv4(),
               price: 800,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lolkek",
             },
           ],
         },
         {
           name: "Прыжки",
+          id: uuidv4(),
           questions: [
             {
+              id: uuidv4(),
               price: 800,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lolkek",
             },
             {
+              id: uuidv4(),
               price: 800,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lolkek",
             },
             {
+              id: uuidv4(),
               price: 800,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lolkek",
             },
             {
+              id: uuidv4(),
               price: 800,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lolkek",
             },
             {
+              id: uuidv4(),
               price: 800,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lolkek",
             },
           ],
         },
         {
           name: "Полеты",
+          id: uuidv4(),
           questions: [
             {
+              id: uuidv4(),
               price: 800,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lolkek",
             },
             {
+              id: uuidv4(),
               price: 800,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lolkek",
             },
             {
+              id: uuidv4(),
               price: 800,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lolkek",
             },
             {
+              id: uuidv4(),
               price: 800,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lolkek",
             },
             {
+              id: uuidv4(),
               price: 800,
-              prompt:
+              text:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit veritatis nihil officiis rerum ad error cupiditate beatae, maiores sint itaque laborum a dignissimos nesciunt atque dolorum, soluta sunt nobis.",
+              answer: "lolkek",
             },
           ],
         },
