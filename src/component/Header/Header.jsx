@@ -36,6 +36,9 @@ export default function Header() {
         <Link button="true" to="/create-new-gamepack">
           Создать пакет
         </Link>
+        <Link button="true" to="/register">
+          register
+        </Link>
       </div>
     </header>
   );

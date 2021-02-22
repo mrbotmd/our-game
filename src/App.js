@@ -4,6 +4,8 @@ import Game from "./component/Game/Game";
 import GamePackForm from "./component/GamePack/GamePackForm";
 import Header from "./component/Header/Header";
 import axios from "axios";
+import Register from "./Pages/Register/Register";
+import { BASE_URL, USER_SESSIONS } from "./paths";
 
 function App() {
   const [accessToken, setAccessToken] = useState(
@@ -13,7 +15,7 @@ function App() {
   useEffect(() => {
     axios({
       method: "POST",
-      url: "http://5.63.112.35:5010/user-sessions",
+      url: BASE_URL + USER_SESSIONS,
     })
       .then((res) => {
         if (accessToken === "") {
@@ -26,9 +28,13 @@ function App() {
 
   return (
     <div className="App">
+      <button onClick={() => window.localStorage.removeItem("accessToken")}>
+        clear token
+      </button>
       <Route path="/" component={Header} exact />
       <Route path="/game" component={Game} exact />
       <Route path="/create-new-gamepack" component={GamePackForm} exact />
+      <Route path="/register" component={Register} exact />
     </div>
   );
 }
