@@ -3,9 +3,7 @@ import { Route } from "react-router-dom";
 import Game from "./component/Game/Game";
 import GamePackForm from "./component/GamePack/GamePackForm";
 import Header from "./component/Header/Header";
-// import axios from "axios";
-// import { BASE_URL, USER_SESSIONS } from "./paths";
-import Register from "./Pages/Register/Register";
+import AuthPage from "./Pages/AuthPage/AuthPage";
 import { startUserSession } from "./axiosClient";
 import { IsLoggedInContext } from "./context/IsLoggedInContext";
 
@@ -41,7 +39,9 @@ function App() {
       <Route path="/" component={Header} exact />
       <Route path="/game" component={Game} exact />
       <Route path="/create-new-gamepack" component={GamePackForm} exact />
-      <Route path="/register" component={Register} exact />
+      <Route path="/register" component={AuthPage} exact />
+      <Route path="/login" component={AuthPage} exact />
+      <Route path="/logout" component={AuthPage} exact />
     </div>
   );
 }

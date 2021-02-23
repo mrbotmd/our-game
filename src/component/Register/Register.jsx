@@ -1,16 +1,10 @@
 import React, { useState } from "react";
 import { Formik, Field, Form } from "formik";
-import { useHistory } from "react-router-dom";
 import { registerUser } from "../../axiosClient";
 
 export default function Register() {
   const [accessToken] = useState(window.localStorage.getItem("accessToken"));
-  const [username, setUsername] = useState("");
-  const history = useHistory();
-  console.log(
-    "🚀 ~ file: Register.jsx ~ line 7 ~ Register ~ accessToken",
-    accessToken
-  );
+
   return (
     <div>
       <Formik
