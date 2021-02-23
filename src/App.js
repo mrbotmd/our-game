@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Route } from "react-router-dom";
 import Game from "./component/Game/Game";
 import GamePackForm from "./component/GamePack/GamePackForm";
@@ -7,13 +7,14 @@ import Header from "./component/Header/Header";
 // import { BASE_URL, USER_SESSIONS } from "./paths";
 import Register from "./Pages/Register/Register";
 import { startUserSession } from "./axiosClient";
-import { IsLoggedInProvider } from "./context/IsLoggedInContext";
+import { IsLoggedInContext } from "./context/IsLoggedInContext";
 
 function App() {
   const [accessToken, setAccessToken] = useState(
     window.localStorage.getItem("accessToken") || ""
   );
   console.log("🚀 ~ file: App.js ~ line 13 ~ App ~ accessToken", accessToken);
+  const { isLoggedIn, setIsLoggedIn } = useContext(IsLoggedInContext);
 
   useEffect(() => {
     const getAccessToken = async () => {
@@ -22,26 +23,26 @@ function App() {
         if (accessToken === "") {
           window.localStorage.setItem("accessToken", access_token);
           setAccessToken(access_token);
+          setIsLoggedIn(true);
         }
       } catch (error) {
         console.error(error);
       }
     };
     getAccessToken();
-  }, [accessToken]);
+  }, [accessToken, setIsLoggedIn]);
 
   return (
-    <IsLoggedInProvider>
-      <div className="App">
-        <button onClick={() => window.localStorage.removeItem("accessToken")}>
-          clear token
-        </button>
-        <Route path="/" component={Header} exact />
-        <Route path="/game" component={Game} exact />
-        <Route path="/create-new-gamepack" component={GamePackForm} exact />
-        <Route path="/register" component={Register} exact />
-      </div>
-    </IsLoggedInProvider>
+    <div className="App">
+      <button onClick={() => window.localStorage.removeItem("accessToken")}>
+        clear token
+      </button>
+      <button onClick={() => console.log(isLoggedIn)}>isLoggedIn?</button>
+      <Route path="/" component={Header} exact />
+      <Route path="/game" component={Game} exact />
+      <Route path="/create-new-gamepack" component={GamePackForm} exact />
+      <Route path="/register" component={Register} exact />
+    </div>
   );
 }
 
