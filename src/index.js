@@ -3,15 +3,15 @@ import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import "./assets/styles/index.css";
 import App from "./App";
-import { IsLoggedInProvider } from "./context/IsLoggedInContext";
+import { AuthProvider } from "./context/AuthContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <IsLoggedInProvider>
+    <AuthProvider>
       <BrowserRouter>
         <App />
       </BrowserRouter>
-    </IsLoggedInProvider>
+    </AuthProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
