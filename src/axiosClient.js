@@ -2,20 +2,28 @@ import axios from "axios";
 import {
   BASE_URL,
   GAME_PACKS,
+  CREATE_GAME_PACK,
   USER_REGISTER,
   USER_AUTH,
+  USER_LOGOUT,
   USER_SESSIONS,
   GAME_SESSIONS,
+  GAME_SESSIONS_TYPES,
+  ALL_GAMES,
+  GAME_PARTICIPANTS,
+  GAME_PARTICIPANTS_TYPES,
+  OPEN_SOKET_CONNECTION,
 } from "./paths";
 
 export async function startUserSession() {
   const access_token = await axios({
     method: "POST",
-    url: BASE_URL + USER_SESSIONS,
+    baseURL: BASE_URL,
+    url: USER_SESSIONS,
   })
     .then((res) => {
       console.log(res);
-      return res.data.access_token;
+      return res;
     })
     .catch((err) => console.error(err));
   return access_token;
@@ -23,7 +31,8 @@ export async function startUserSession() {
 
 export async function registerUser(accessToken, regData) {
   const register = await axios({
-    url: BASE_URL + USER_REGISTER,
+    baseURL: BASE_URL,
+    url: USER_REGISTER,
     method: "POST",
     data: regData,
     headers: {
@@ -45,11 +54,47 @@ export async function authUser(accessToken, authData) {
     "🚀 ~ file: axiosClient.js ~ line 44 ~ authUser ~ authData",
     authData
   );
-  const { emailLogin, passwordLogin } = authData;
+  const { email, password } = authData;
   const auth = await axios({
-    url: BASE_URL + USER_AUTH,
+    baseURL: BASE_URL,
+    url: USER_AUTH,
     method: "POST",
-    data: { email: emailLogin, password: passwordLogin },
+    data: authData,
+    headers: {
+      access_token: accessToken,
+    },
+  })
+    .then((res) => {
+      console.log(res);
+      return res;
+    })
+    .catch((err) => err.response && console.log(err.response.data));
+  return auth;
+}
+
+export async function logoutUser(accessToken) {
+  const logout = await axios({
+    baseURL: BASE_URL,
+    url: USER_LOGOUT,
+    method: "POST",
+    headers: {
+      access_token: accessToken,
+    },
+  })
+    .then((res) => {
+      console.log("🚀 ~ file: axiosClient.js ~ line 85 ~ .then ~ res", res);
+      return res;
+    })
+    .catch((err) => err.response && console.log(err.response.data));
+  return logout;
+}
+
+export async function getGamePackConfig(accessToken, gameCode) {
+  const gamePack = await axios({
+    baseURL: BASE_URL,
+    url: CREATE_GAME_PACK,
+    method: "POST",
+    data: { gameCode: gameCode },
     headers: {
       access_token: accessToken,
     },
@@ -59,5 +104,5 @@ export async function authUser(accessToken, authData) {
       return res;
     })
     .catch((err) => console.error(err));
-  return auth;
+  return gamePack;
 }

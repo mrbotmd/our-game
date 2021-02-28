@@ -33,7 +33,7 @@ export default function Header() {
         <Link button="true" to="/game">
           Играть
         </Link>
-        <Link button="true" to="/create-new-gamepack">
+        <Link button="true" to="/create-gamepack">
           Создать пакет
         </Link>
         <Link button="true" to="/register">

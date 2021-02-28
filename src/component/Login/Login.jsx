@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import { Formik, Field, Form } from "formik";
 import { authUser } from "../../axiosClient";
 
-export default function Register() {
-  const [accessToken] = useState(window.localStorage.getItem("accessToken"));
-
+export default function Login({ handleUserAuth }) {
   return (
     <div>
       <Formik
@@ -13,7 +11,7 @@ export default function Register() {
           password: "",
         }}
         onSubmit={async (values) => {
-          await authUser(accessToken, values);
+          handleUserAuth(values, authUser);
         }}
       >
         <Form>
