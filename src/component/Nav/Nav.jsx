@@ -6,8 +6,16 @@ import { AuthContext } from "../../context/AuthContext";
 export default function Nav() {
   const [state, dispatch] = useContext(AuthContext);
 
-  const handleLogout = (accessToken) => {
-    dispatch({ type: "LOGOUT" });
+  // Потенциально эту функцию вынести в хэлперы
+  const handleLogout = async () => {
+    try {
+      const isLoggedOut = await logoutUser(state.acceesToken);
+      if (isLoggedOut.status === 200) {
+        dispatch({ type: "LOGOUT" });
+      }
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (

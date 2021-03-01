@@ -1,6 +1,4 @@
-import { ErrorSharp } from "@material-ui/icons";
-import React, { useState, createContext, useEffect, useReducer } from "react";
-import { logoutUser } from "../axiosClient";
+import React, { createContext, useReducer } from "react";
 
 export const AuthContext = createContext();
 
@@ -14,39 +12,18 @@ export const AuthProvider = ({ children }) => {
     initAuthState
   );
 
-  const authReducer = async (state, action) => {
+  const authReducer = (state, action) => {
     switch (action.type) {
       case "LOGIN": {
-        console.log("AuthContext -> LOGIN", action);
         window.localStorage.setItem("accessToken", action.payload.accessToken);
         window.localStorage.setItem("isLoggedIn", true);
         return { isLoggedIn: true, acceesToken: action.payload.accessToken };
       }
 
       case "LOGOUT":
-        try {
-          console.log(
-            "🚀 ~ file: AuthContext.js ~ line 38 ~ authReducer ~ state",
-            state
-          );
-          console.log(
-            "🚀 ~ file: AuthContext.js ~ line 34 ~ authReducer ~ state.acceesToken",
-            state.acceesToken
-          );
-          const isLoggedOut = await logoutUser(state.acceesToken);
-          console.log(
-            "🚀 ~ file: AuthContext.js ~ line 25 ~ authReducer ~ isLoggedOut",
-            isLoggedOut
-          );
-          if (isLoggedOut.status === 200) {
-            window.localStorage.setItem("accessToken", "");
-            window.localStorage.setItem("isLoggedIn", false);
-            return { isLoggedIn: false, acceesToken: "" };
-          }
-        } catch (error) {
-          console.error(error);
-        }
-        break;
+        window.localStorage.setItem("accessToken", "");
+        window.localStorage.setItem("isLoggedIn", false);
+        return { isLoggedIn: false, acceesToken: "" };
 
       default:
         return state;

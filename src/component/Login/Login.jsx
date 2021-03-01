@@ -1,8 +1,9 @@
-import React, { useState } from "react";
 import { Formik, Field, Form } from "formik";
 import { authUser } from "../../axiosClient";
+import { useHistory } from "react-router-dom";
 
 export default function Login({ handleUserAuth }) {
+  const history = useHistory();
   return (
     <div>
       <Formik
@@ -11,7 +12,8 @@ export default function Login({ handleUserAuth }) {
           password: "",
         }}
         onSubmit={async (values) => {
-          handleUserAuth(values, authUser);
+          await handleUserAuth(values, authUser);
+          history.push("/");
         }}
       >
         <Form>

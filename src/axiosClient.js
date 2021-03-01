@@ -40,21 +40,12 @@ export async function registerUser(accessToken, regData) {
     },
   })
     .then((res) => {
-      console.log(
-        "🚀 ~ file: axiosClient.js ~ line 39 ~ registerUser ~ res",
-        res
-      );
       return res;
     })
     .catch((err) => err.response && console.log(err.response.data));
   return register;
 }
 export async function authUser(accessToken, authData) {
-  console.log(
-    "🚀 ~ file: axiosClient.js ~ line 44 ~ authUser ~ authData",
-    authData
-  );
-  const { email, password } = authData;
   const auth = await axios({
     baseURL: BASE_URL,
     url: USER_AUTH,
@@ -65,7 +56,6 @@ export async function authUser(accessToken, authData) {
     },
   })
     .then((res) => {
-      console.log(res);
       return res;
     })
     .catch((err) => err.response && console.log(err.response.data));
@@ -82,7 +72,6 @@ export async function logoutUser(accessToken) {
     },
   })
     .then((res) => {
-      console.log("🚀 ~ file: axiosClient.js ~ line 85 ~ .then ~ res", res);
       return res;
     })
     .catch((err) => err.response && console.log(err.response.data));
