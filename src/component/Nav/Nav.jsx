@@ -1,22 +1,11 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { logoutUser } from "../../axiosClient";
+import { logoutUser, startUserSession } from "../../axiosClient";
 import { AuthContext } from "../../context/AuthContext";
+import { handleUserAuth } from "../../helpers";
 
 export default function Nav() {
-  const [state, dispatch] = useContext(AuthContext);
-
-  // Потенциально эту функцию вынести в хэлперы
-  const handleLogout = async () => {
-    try {
-      const isLoggedOut = await logoutUser(state.acceesToken);
-      if (isLoggedOut.status === 200) {
-        dispatch({ type: "LOGOUT" });
-      }
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  const [, dispatch] = useContext(AuthContext);
 
   return (
     <nav>
@@ -30,7 +19,19 @@ export default function Nav() {
         <li>
           <Link to="/register">Sign up </Link>
         </li>
-        <button onClick={handleLogout}>logout</button>
+        <button
+          onClick={async () =>
+            await handleUserAuth(
+              "",
+              "LOGOUT",
+              logoutUser,
+              startUserSession,
+              dispatch
+            )
+          }
+        >
+          logout
+        </button>
       </ul>
     </nav>
   );

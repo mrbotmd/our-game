@@ -5,7 +5,7 @@ export const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const initAuthState = {
     isLoggedIn: JSON.parse(window.localStorage.getItem("isLoggedIn")) || false,
-    acceesToken: window.localStorage.getItem("accessToken") || "",
+    accessToken: window.localStorage.getItem("accessToken") || "",
   };
   console.log(
     "🚀 ~ file: AuthContext.js ~ line 12 ~ AuthProvider ~ initAuthState",
@@ -17,13 +17,13 @@ export const AuthProvider = ({ children }) => {
       case "LOGIN": {
         window.localStorage.setItem("accessToken", action.payload.accessToken);
         window.localStorage.setItem("isLoggedIn", true);
-        return { isLoggedIn: true, acceesToken: action.payload.accessToken };
+        return { isLoggedIn: true, accessToken: action.payload.accessToken };
       }
 
       case "LOGOUT":
         window.localStorage.setItem("accessToken", "");
         window.localStorage.setItem("isLoggedIn", false);
-        return { isLoggedIn: false, acceesToken: "" };
+        return { isLoggedIn: false, accessToken: "" };
 
       default:
         return state;
