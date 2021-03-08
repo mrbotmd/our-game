@@ -39,6 +39,9 @@ export default function Header() {
         <Link button="true" to="/register">
           register
         </Link>
+        <Link button="true" to="/games">
+          All Games
+        </Link>
       </div>
     </header>
   );
