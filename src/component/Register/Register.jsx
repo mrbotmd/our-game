@@ -1,5 +1,5 @@
 import { Formik, Field, Form } from "formik";
-import { registerUser, startUserSession } from "../../axiosClient";
+import { registerUser } from "../../axiosClient";
 import { useHistory } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
@@ -17,13 +17,7 @@ export default function Register() {
           password: "",
         }}
         onSubmit={async (values) => {
-          await handleUserAuth(
-            values,
-            "LOGIN",
-            registerUser,
-            startUserSession,
-            dispatch
-          );
+          await handleUserAuth(values, "LOGIN", registerUser, dispatch);
           history.location.pathname === "/register" && history.push("/");
         }}
       >

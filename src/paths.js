@@ -21,12 +21,15 @@ const USER_LOGOUT = "user-sessions/logout";
 const ALL_GAMES = "/games";
 // get - accessToken & game code
 const CREATE_GAME_PACK = "/games/pack-config";
+// get - accessToken & game code
+const SESSION_CONFIG = "/games/session-config";
 const OPEN_SOKET_CONNECTION = "/ws";
 // post -> header: access_token
 //      -> body: game_session:"", name(имя пользователя): "", type_id(тип участника): "",
 const GAME_PARTICIPANTS = "/game-participants";
 // get -> game_id: ""
 const GAME_PARTICIPANTS_TYPES = "/game-participants/types";
+const USER_PROFILE = "/profile";
 
 export {
   BASE_URL,
@@ -36,10 +39,12 @@ export {
   USER_AUTH,
   USER_LOGOUT,
   USER_SESSIONS,
+  USER_PROFILE,
   GAME_SESSIONS,
   GAME_SESSIONS_TYPES,
   ALL_GAMES,
   GAME_PARTICIPANTS,
   GAME_PARTICIPANTS_TYPES,
   OPEN_SOKET_CONNECTION,
+  SESSION_CONFIG,
 };

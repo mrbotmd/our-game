@@ -13,6 +13,7 @@ function App() {
         onClick={() => {
           window.localStorage.setItem("accessToken", "");
           window.localStorage.setItem("isLoggedIn", false);
+          window.localStorage.setItem("profile", JSON.stringify({}));
         }}
       >
         clear token

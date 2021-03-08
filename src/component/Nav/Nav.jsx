@@ -21,13 +21,7 @@ export default function Nav() {
         </li>
         <button
           onClick={async () =>
-            await handleUserAuth(
-              "",
-              "LOGOUT",
-              logoutUser,
-              startUserSession,
-              dispatch
-            )
+            await handleUserAuth("", "LOGOUT", logoutUser, dispatch)
           }
         >
           logout
