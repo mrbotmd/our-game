@@ -1,33 +1,16 @@
-const BASE_URL = "http://5.63.112.35:5010/";
-// get - game_id - packs list
-// post - add new game pack
-// put - update existing pack -> send game_pack_id, name, description, packet
-const GAME_PACKS = "game-packs";
-// post
-const USER_REGISTER = "register";
-// post
-const USER_AUTH = "auth";
-// post
-const USER_SESSIONS = "user-sessions";
-// post - open game session ->
-// header: access_token,
-// body: game_pack_id, name(имя сессии), password(пароль сессии необязательно), type_id(тип игровой сессии)(1),
-const GAME_SESSIONS = "game-sessions";
-// get
-const GAME_SESSIONS_TYPES = "game-sessions/types";
-// отправить токен вернет 200
-const USER_LOGOUT = "user-sessions/logout";
-// get
+const BASE_URL = "http://5.63.112.35:5010";
+const GAME_PACKS = "/game-packs";
+const USER_REGISTER = "/register";
+const USER_AUTH = "/auth";
+const USER_SESSIONS = "/user-sessions";
+const GAME_SESSIONS = "/game-sessions";
+const GAME_SESSIONS_TYPES = "/game-sessions/types";
+const USER_LOGOUT = "/user-sessions/logout";
 const ALL_GAMES = "/games";
-// get - accessToken & game code
 const CREATE_GAME_PACK = "/games/pack-config";
-// get - accessToken & game code
 const SESSION_CONFIG = "/games/session-config";
 const OPEN_SOKET_CONNECTION = "/ws";
-// post -> header: access_token
-//      -> body: game_session:"", name(имя пользователя): "", type_id(тип участника): "",
 const GAME_PARTICIPANTS = "/game-participants";
-// get -> game_id: ""
 const GAME_PARTICIPANTS_TYPES = "/game-participants/types";
 const USER_PROFILE = "/profile";
 
