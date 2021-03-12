@@ -1,6 +1,7 @@
 import axios from "axios";
 import {
   BASE_URL,
+  SOCKET_URL,
   GAME_PACKS,
   CREATE_GAME_PACK,
   USER_REGISTER,
@@ -13,7 +14,8 @@ import {
   ALL_GAMES,
   GAME_PARTICIPANTS,
   GAME_PARTICIPANTS_TYPES,
-  OPEN_SOKET_CONNECTION,
+  WS_CONNECTION,
+  USERS,
 } from "./paths";
 
 export async function startUserSession() {
@@ -167,6 +169,7 @@ export async function getGames(accessToken, gameCode) {
     headers: {
       access_token: accessToken,
     },
+    params: gameCode !== undefined && { code: gameCode },
   })
     .then((res) => {
       console.log(res);
@@ -196,4 +199,72 @@ export async function getUserProfile(accessToken) {
     })
     .catch((err) => console.error(err));
   return userProfile;
+}
+
+export async function openWebSocket(accessToken) {
+  console.log(
+    "🚀 ~ file: axiosClient.js ~ line 204 ~ openWebSocket ~ accessToken",
+    accessToken
+  );
+  const data = {
+    type: "system",
+    method: "session",
+    access_token: accessToken,
+  };
+  console.log(
+    "🚀 ~ file: axiosClient.js ~ line 213 ~ openWebSocket ~ data",
+    data
+  );
+
+  const socket = new WebSocket(SOCKET_URL + WS_CONNECTION);
+  // socket.onopen = (e) => {
+  //   // socket.send(JSON.stringify(data));
+  //   socket.send("dada");
+  //   console.log(e);
+  // };
+  // socket.onmessage = (e) => {
+  //   console.log(e);
+  // };
+
+  // socket.onerror = (e) => {
+  //   console.log(e);
+  // };
+
+  // socket.onclose = (e) => {
+  //   console.log(e);
+  // };
+
+  return socket;
+}
+
+export async function getUsersByName(name) {
+  console.log("🚀 ~ file: axiosClient.js ~ line 241 ~ getUsers ~ name", name);
+  const users = await axios({
+    method: "GET",
+    baseURL: BASE_URL,
+    url: USERS,
+    params: { name: name },
+  })
+    .then((res) => {
+      console.log(res);
+      return res;
+    })
+    .catch((err) => err.response && console.log(err.response.data));
+  return users;
+}
+
+export async function getUserById(id) {
+  console.log("🚀 ~ file: axiosClient.js ~ line 241 ~ getUsers ~ id", id);
+  const users = await axios({
+    method: "GET",
+    baseURL: BASE_URL,
+    url: USERS,
+    params: id,
+  })
+    .then((res) => {
+      console.log(res);
+      return res;
+    })
+    .catch((err) => console.error(err));
+  return users;
 }

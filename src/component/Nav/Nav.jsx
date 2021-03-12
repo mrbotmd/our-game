@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { logoutUser, startUserSession } from "../../axiosClient";
 import { AuthContext } from "../../context/AuthContext";
 import { handleUserAuth } from "../../helpers";
+import UserSearch from "../UserSearch/UserSearch";
 
 export default function Nav() {
   const [, dispatch] = useContext(AuthContext);
@@ -27,6 +28,7 @@ export default function Nav() {
           logout
         </button>
       </ul>
+      <UserSearch />
     </nav>
   );
 }
