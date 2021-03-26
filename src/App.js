@@ -5,6 +5,8 @@ import Nav from "./component/Nav/Nav";
 import CreateGamePackPage from "./Pages/CreateGamePackPage/CreateGamePackPage";
 import GamesPage from "./Pages/GamesPage/GamesPage";
 import GamePage from "./Pages/GamePage/GamePage";
+import GameWindow from "./component/GameWindow/GameWindow";
+import GameSessionsPage from "./Pages/GameSessionsPage/GameSessionsPage";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
       </button>
       {/* <button onClick={() => console.log(isLoggedIn)}>isLoggedIn?</button> */}
       <Route path="/" component={Header} exact />
+      <Route path="/game" component={GameSessionsPage} exact />
+      <Route path="/game/:gameSessionsId" component={GameWindow} exact />
       <Route path="/games" component={GamesPage} exact />
       <Route path="/games/:game" component={GamePage} exact />
       <Route path="/create-gamepack" component={CreateGamePackPage} exact />

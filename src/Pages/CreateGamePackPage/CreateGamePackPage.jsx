@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
-import { getGamePackConfig } from "../../axiosClient";
+import { getGamePackConfig, getGames } from "../../axiosClient";
 import GamePackForm from "../../component/GamePack/GamePackForm";
 import Login from "../../component/Login/Login";
 import { AuthContext } from "../../context/AuthContext";
@@ -17,11 +17,16 @@ export default function CreateGamePackPage() {
   useEffect(() => {
     const fetchGamePackConfig = async () => {
       try {
+        const kek = await getGames();
+        console.log(
+          "🚀 ~ file: CreateGamePackPage.jsx ~ line 21 ~ fetchGamePackConfig ~ kek",
+          kek
+        );
         if (auth.accessToken === "") {
           return;
         } else {
-          const data = await getGamePackConfig(auth.accessToken, "jeopardy");
-          setGamePackConfig(data);
+          const res = await getGamePackConfig(auth.accessToken, "jeopardy");
+          setGamePackConfig(JSON.parse(res.data.pack_config));
         }
       } catch (error) {
         console.error(error.message);

@@ -92,7 +92,7 @@ export default function GamePackForm({ profile, gamePackConfig }) {
                 <p>
                   <label htmlFor="auto_price">Автонастройка цены</label>
                 </p>
-                <Field name="auto_price" type="checkbox" />
+                <Field name="auto_price" id="auto_price" type="checkbox" />
               </div>
               <div>
                 <p>

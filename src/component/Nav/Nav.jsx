@@ -6,7 +6,7 @@ import { handleUserAuth } from "../../helpers";
 import UserSearch from "../UserSearch/UserSearch";
 
 export default function Nav() {
-  const [, dispatch] = useContext(AuthContext);
+  const [auth, dispatch] = useContext(AuthContext);
 
   return (
     <nav>
@@ -20,13 +20,15 @@ export default function Nav() {
         <li>
           <Link to="/register">Sign up </Link>
         </li>
-        <button
-          onClick={async () =>
-            await handleUserAuth("", "LOGOUT", logoutUser, dispatch)
-          }
-        >
-          logout
-        </button>
+        {auth.isLoggedIn && (
+          <button
+            onClick={async () =>
+              await handleUserAuth("", "LOGOUT", logoutUser, dispatch)
+            }
+          >
+            logout
+          </button>
+        )}
       </ul>
       <UserSearch />
     </nav>

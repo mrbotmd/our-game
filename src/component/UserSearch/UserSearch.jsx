@@ -29,7 +29,7 @@ export default function UserSearch() {
                   if (!typing) {
                     setTyping(true);
                     setTimeout(() => {
-                      getUsersByName(e.target.value);
+                      getUsersByName({ name: e.target.value });
                       setTyping(false);
                     }, 3000);
                   }
